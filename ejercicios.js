@@ -1,12 +1,13 @@
 function ejecutar(numEjercicio){
-    if(numEjercicio == 1){
-        imprimirNumeros()
-    }else if(numEjercicio == 2){
-        imprimirNumeroReversa()
-    }else if(numEjercicio == 3){
-        listarPares()
-    }else if(numEjercicio == 4){
-        listarImpares()
+    switch(numEjercicio){
+        case 1: imprimirNumeros()
+        break;
+        case 2: imprimirNumeroReversa()
+        break;
+        case 3: listarPares()
+        break;
+        case 4: listarImpares()
+        break;
     }
 }
 
