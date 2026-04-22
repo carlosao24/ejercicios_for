@@ -1,9 +1,3 @@
-function imprimirNumeros(){
-    for(let i = 0; i <= 3; i++){
-        console.log(i)
-    }
-}
-
 function ejecutar(numEjercicio){
     if(numEjercicio == 1){
         imprimirNumeros()
@@ -11,6 +5,14 @@ function ejecutar(numEjercicio){
         imprimirNumeroReversa()
     }else if(numEjercicio == 3){
         listarPares()
+    }else if(numEjercicio == 4){
+        listarImpares()
+    }
+}
+
+function imprimirNumeros(){
+    for(let i = 0; i <= 3; i++){
+        console.log(i)
     }
 }
 
@@ -22,6 +24,12 @@ function imprimirNumeroReversa(){
 
 function listarPares(){
     for(let i = 0; i < 10; i+=2){
+        console.log(i)
+    }
+}
+
+function listarImpares(){
+    for(let i = 1; i < 8; i+=2){
         console.log(i)
     }
 }
