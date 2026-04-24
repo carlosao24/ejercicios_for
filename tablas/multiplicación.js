@@ -4,7 +4,7 @@ function generarTabla(){
     let valor = document.getElementById("txtCaja1")
     let n = valor.value;
     let numeroTabla = parseInt(n)
-    for(let i =1; i < 11; i++){
+    for(let i =1; i < 13; i++){
         contenido = contenido + "<div class='table-row' ><span>"+ numeroTabla +"x" + (i) + "=</span> <strong>"+ (numeroTabla * i) + "</strong></div>"
         console.log(contenido)
         contenedor.innerHTML = contenido 
