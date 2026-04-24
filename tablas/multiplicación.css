@@ -1,127 +1,166 @@
-/* Paleta Enterprise y Tipografía */
 :root {
-    --azul-metalico: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d); /* Base para el efecto metal */
-    --fondo-fluorescente: radial-gradient(ellipse at center, #001f3f 0%, #000b18 100%);
-    --cafe-claro: #d2b48c; /* Tan/Café claro */
-    --cafe-desvanecido: #f5f5dc; /* Beige/Crema */
-    --blanco-puro: #ffffff;
-    --negro-enterprise: #0a0a0a;
+    /* Paleta Renovada */
+    --azul-cielo-fluo: #00d4ff; 
+    --azul-profundo: #001220;
+    --cafe-premium: #d2b48c;
+    --cafe-suave: #f5f5dc;
+    --blanco-cristal: rgba(255, 255, 255, 0.9);
+    --negro-ebano: #050505;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* Letras tipo Times New Roman, medianas y negrita por defecto */
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 body {
-    /* Fondo Azul Fluorescente Metálico */
-    background: var(--fondo-fluorescente);
+    /* Fondo con profundidad metálica */
+    background: radial-gradient(circle at center, #001f3f 0%, #000810 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    color: var(--negro-enterprise);
 }
 
 .container {
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
-/* Botón con estilo de Alto Contraste */
-.btn-probar {
-    background-color: var(--blanco-puro);
-    color: var(--negro-enterprise);
-    border: 2px solid var(--cafe-claro);
-    padding: 12px;
+/* Estilo del Input */
+.main-input {
+    width: 100%;
+    padding: 15px;
+    background: var(--negro-ebano);
+    border: 1px solid var(--azul-cielo-fluo);
+    color: var(--azul-cielo-fluo);
     font-size: 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+/* Contenedor de Botones (Responsive) */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-probar, .btn-reiniciar {
+    padding: 15px;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-probar {
+    background: var(--blanco-cristal);
+    border: 2px solid var(--cafe-premium);
+    color: var(--negro-ebano);
 }
 
 .btn-probar:hover {
-    background-color: var(--cafe-claro);
-    color: var(--blanco-puro);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); /* Brillo fluorescente sutil */
+    background: var(--azul-cielo-fluo);
+    border-color: var(--blanco-cristal);
+    box-shadow: 0 0 20px var(--azul-cielo-fluo);
 }
 
-/* Tarjeta con degradado Café Claro Desvaneciéndose */
-.table-card {
-    background: linear-gradient(135deg, var(--blanco-puro) 0%, var(--cafe-desvanecido) 100%);
-    padding: 35px;
-    border-radius: 5px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-left: 5px solid var(--negro-enterprise);
+.btn-reiniciar {
+    background: transparent;
+    border: 2px solid var(--cafe-premium);
+    color: var(--cafe-premium);
+}
+
+.btn-reiniciar:hover {
+    background: rgba(210, 180, 140, 0.1);
+    color: var(--blanco-cristal);
+}
+
+/* Encabezado del Número */
+.display-header h2 {
+    background: var(--negro-ebano);
+    color: var(--blanco-cristal);
+    border: 1px solid var(--cafe-premium);
+    padding: 15px;
     text-align: center;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: var(--negro-enterprise);
-    margin-bottom: 25px;
-    border-bottom: 3px double var(--cafe-claro);
-    padding-bottom: 10px;
+.display-header h2 span {
+    color: var(--azul-cielo-fluo); /* El número resalta en azul cielo */
+}
+
+/* Tarjeta de Tabla con efecto Café Desvanecido */
+.table-card {
+    background: linear-gradient(180deg, var(--blanco-cristal) 0%, var(--cafe-suave) 100%);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    border-top: 4px solid var(--azul-cielo-fluo); /* Detalle fluorescente superior */
 }
 
 .table-row {
     display: flex;
     justify-content: space-between;
-    padding: 12px 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem; /* Tamaño mediano */
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+    color: var(--negro-ebano);
 }
 
-.table-row:last-child {
-    border-bottom: none;
-}
-
-.table-row span {
-    color: #444;
-}
-
-.table-row strong {
-    color: var(--negro-enterprise);
-    font-size: 1.3rem;
-}
-
-/* Pie de página Empresarial */
-.footer-enterprise {
+.welcome-text {
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    color: var(--blanco-puro);
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+/* Footer Premium */
+.footer-enterprise {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .logo-placeholder img {
-    max-width: 100px;
-    height: auto;
-    filter: grayscale(100%) brightness(1.5); /* Hace que el logo combine con el entorno */
+    max-width: 90px;
+    filter: drop-shadow(0 0 5px var(--azul-cielo-fluo)) brightness(1.2);
     margin-bottom: 10px;
 }
 
 .created-by {
-    font-size: 0.9rem;
+    color: var(--cafe-premium);
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.8;
+    letter-spacing: 4px;
 }
 
-/* Responsividad */
+/* Mejoras para Dispositivos Móviles */
 @media (max-width: 480px) {
-    .table-card {
-        padding: 20px;
+    .container {
+        padding: 10px;
     }
-    .table-row {
-        font-size: 1.1rem;
+    
+    .display-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr; /* Botones uno sobre otro en móvil */
     }
 }
