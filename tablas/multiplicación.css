@@ -1,0 +1,127 @@
+/* Paleta Enterprise y Tipografía */
+:root {
+    --azul-metalico: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d); /* Base para el efecto metal */
+    --fondo-fluorescente: radial-gradient(ellipse at center, #001f3f 0%, #000b18 100%);
+    --cafe-claro: #d2b48c; /* Tan/Café claro */
+    --cafe-desvanecido: #f5f5dc; /* Beige/Crema */
+    --blanco-puro: #ffffff;
+    --negro-enterprise: #0a0a0a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Letras tipo Times New Roman, medianas y negrita por defecto */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+body {
+    /* Fondo Azul Fluorescente Metálico */
+    background: var(--fondo-fluorescente);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--negro-enterprise);
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Botón con estilo de Alto Contraste */
+.btn-probar {
+    background-color: var(--blanco-puro);
+    color: var(--negro-enterprise);
+    border: 2px solid var(--cafe-claro);
+    padding: 12px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-probar:hover {
+    background-color: var(--cafe-claro);
+    color: var(--blanco-puro);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); /* Brillo fluorescente sutil */
+}
+
+/* Tarjeta con degradado Café Claro Desvaneciéndose */
+.table-card {
+    background: linear-gradient(135deg, var(--blanco-puro) 0%, var(--cafe-desvanecido) 100%);
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-left: 5px solid var(--negro-enterprise);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--negro-enterprise);
+    margin-bottom: 25px;
+    border-bottom: 3px double var(--cafe-claro);
+    padding-bottom: 10px;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem; /* Tamaño mediano */
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row span {
+    color: #444;
+}
+
+.table-row strong {
+    color: var(--negro-enterprise);
+    font-size: 1.3rem;
+}
+
+/* Pie de página Empresarial */
+.footer-enterprise {
+    text-align: center;
+    padding: 20px;
+    color: var(--blanco-puro);
+}
+
+.logo-placeholder img {
+    max-width: 100px;
+    height: auto;
+    filter: grayscale(100%) brightness(1.5); /* Hace que el logo combine con el entorno */
+    margin-bottom: 10px;
+}
+
+.created-by {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.8;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .table-card {
+        padding: 20px;
+    }
+    .table-row {
+        font-size: 1.1rem;
+    }
+}
